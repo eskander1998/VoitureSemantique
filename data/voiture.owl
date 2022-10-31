@@ -56,8 +56,16 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_ajouté_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_ajouté_par">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonVoiture"/>
     </owl:ObjectProperty>
     
 
@@ -75,6 +83,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_repare">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#repare"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mecanicien"/>
     </owl:ObjectProperty>
     
 
@@ -97,7 +106,6 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
     </owl:ObjectProperty>
     
 
@@ -161,7 +169,6 @@
     <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#categorieType -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#categorieType">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -545,19 +552,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur">
@@ -635,13 +629,6 @@
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -730,6 +717,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#GPS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#GPS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MoyenBudget"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonMercedes"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonRenault"/>
+        <nomOptions>GPS</nomOptions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#JantesAlu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#JantesAlu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#HautBudget"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonMercedes"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonRenault"/>
+        <nomOptions>JantesAlu</nomOptions>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW">
@@ -751,6 +764,7 @@
     <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#HautDeGamme"/>
         <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Omar"/>
         <nomMaisonVoiture>MaisonPeugeot</nomMaisonVoiture>
     </owl:NamedIndividual>
@@ -836,6 +850,7 @@
     <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Peugeot -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Peugeot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MoyenneGamme"/>
         <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
         <gammeMarque>MoyenneGamme</gammeMarque>
         <nomMarque>Peugeot</nomMarque>
@@ -843,9 +858,23 @@
     
 
 
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#RadarDeRecul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#RadarDeRecul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BasBudget"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonMercedes"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot"/>
+        <est_ajouté_par rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonRenault"/>
+        <nomOptions>RadarDeRecul</nomOptions>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Renault -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Renault">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MoyenneGamme"/>
         <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
         <gammeMarque>MoyenneGamme</gammeMarque>
         <nomMarque>Renault</nomMarque>
