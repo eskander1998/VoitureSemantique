@@ -1,16 +1,140 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#"
-     xml:base="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12"
+<rdf:RDF xmlns="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:untitled-ontology-5="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#"
-     xmlns:untitled-ontology-12="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12">
-        <owl:imports rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5"/>
-    </owl:Ontology>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#a_pour_personnel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#a_pour_personnel">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#CasseAuto"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonVoiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Diagnostiqueur"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mecanicien"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#SpécialisteClimatisation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#VendeurPieces"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#CasseAuto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonVoiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Classe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Entretien"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_effectue_pour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_effectue_pour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Entretien"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_repare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_repare">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#repare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#fait_diagnostique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#fait_diagnostique">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Diagnostiqueur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Classe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Entretien"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#repare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#repare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mecanicien"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#vend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#vend">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#vend_pieces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#vend_pieces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#VendeurPieces"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#verifie_climatisation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#verifie_climatisation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#SpécialisteClimatisation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+    </owl:ObjectProperty>
     
 
 
@@ -25,49 +149,154 @@
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#gammeMarque -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#budgetEntretien -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#gammeMarque">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#budgetEntretien">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Entretien"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#categorieType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#categorieType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#conditionEtat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#conditionEtat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#gammeMarque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#gammeMarque">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomGarage -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomCasseAuto -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomGarage"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomCasseAuto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#CasseAuto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomMarque -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomDiagnostiqeur -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomMarque">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomDiagnostiqeur">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Diagnostiqueur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomGarage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomGarage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomMaisonVoiture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomMaisonVoiture">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonVoiture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomMarque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomMarque">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomVendeurPiece -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomMecanicien -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomVendeurPiece"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomMecanicien">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mecanicien"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomVoiture -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomOptions -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#nomVoiture">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomOptions">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomSpécialisteClimatisation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomSpécialisteClimatisation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#SpécialisteClimatisation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomVendeur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomVendeur">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomVendeurPieces -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomVendeurPieces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#VendeurPieces"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomVoiture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#nomVoiture">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#prixVoiture -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#prixVoiture -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#prixVoiture">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#prixVoiture">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#typeClasse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#typeClasse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Classe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -84,9 +313,302 @@
     
 
 
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BasBudget -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BasBudget">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BasDeGamme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BasDeGamme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#CasseAuto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#CasseAuto">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#a_pour_personnel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#VendeurPieces"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Classe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Classe">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Diagnostiqueur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Diagnostiqueur">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#fait_diagnostique"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Entretien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Entretien">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#est_effectue_pour"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#a_pour_personnel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Diagnostiqueur"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#a_pour_personnel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mecanicien"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#a_pour_personnel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#SpécialisteClimatisation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#HautBudget -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#HautBudget">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#HautDeGamme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#HautDeGamme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonVoiture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonVoiture">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#a_pour_personnel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mecanicien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mecanicien">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#repare"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MoyenBudget -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MoyenBudget">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MoyenneGamme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MoyenneGamme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#SpécialisteClimatisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#SpécialisteClimatisation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Garage"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#verifie_climatisation"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#caractérise"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Vendeur">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonVoiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#vend"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#VendeurPieces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#VendeurPieces">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#CasseAuto"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#vend_pieces"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture">
+    <owl:Class rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#appartient_à"/>
@@ -94,46 +616,34 @@
                 <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
             </owl:Restriction>
         </owl:equivalentClass>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#BasDeGamme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#BasDeGamme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#HautBudget -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#HautBudget">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#HautDeGamme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#HautDeGamme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Marque"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#MoyenBudget -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#MoyenBudget">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#PetitBudget -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#PetitBudget">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Options"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Classe"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Entretien"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Etat"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#posséde"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Type"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -149,24 +659,274 @@
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#Mercedes -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BMW -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#Mercedes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#HautDeGamme"/>
-        <untitled-ontology-5:caractérise rdf:resource="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#classeG"/>
-        <gammeMarque>HautDeGamme</gammeMarque>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BMW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#HautDeGamme"/>
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36"/>
+        <gammeMarque>HauteGamme</gammeMarque>
+        <nomMarque>BMW</nomMarque>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigCasseAuto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigCasseAuto">
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Monji"/>
+        <nomCasseAuto>BigCasseAuto</nomCasseAuto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigGarage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigGarage">
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mohammed"/>
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Selim"/>
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Tijeni"/>
+        <nomGarage>BigGarage</nomGarage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Bonne_état -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Bonne_état">
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
+        <conditionEtat>Bonne_état</conditionEtat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mercedes"/>
+        <nomVoiture>ClassG</nomVoiture>
+        <prixVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900000</prixVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Renault"/>
+        <nomVoiture>Clio</nomVoiture>
+        <prixVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24000</prixVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BMW"/>
+        <nomVoiture>E36</nomVoiture>
+        <prixVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</prixVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW">
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Yassine"/>
+        <nomMaisonVoiture>MaisonBMW</nomMaisonVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonMercedes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonMercedes">
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Sami"/>
+        <nomMaisonVoiture>MaisonMercedes</nomMaisonVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot">
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Omar"/>
+        <nomMaisonVoiture>MaisonPeugeot</nomMaisonVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonRenault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonRenault">
+        <a_pour_personnel rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Samir"/>
+        <nomMaisonVoiture>Renault</nomMaisonVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mauvais_état -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mauvais_état">
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG"/>
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6"/>
+        <conditionEtat>Mauvais_état</conditionEtat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mercedes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mercedes">
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG"/>
+        <gammeMarque>HauteGamme</gammeMarque>
         <nomMarque>Mercedes</nomMarque>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#classeG -->
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mohammed -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#classeG">
-        <rdf:type rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Voiture"/>
-        <untitled-ontology-5:appartient_à rdf:resource="http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#Mercedes"/>
-        <nomVoiture>classeG</nomVoiture>
-        <prixVoiture>100000dt</prixVoiture>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Mohammed">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigGarage"/>
+        <repare rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG"/>
+        <repare rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
+        <repare rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36"/>
+        <repare rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6"/>
+        <repare rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
+        <nomMecanicien>Mohammed</nomMecanicien>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Monji -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Monji">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigCasseAuto"/>
+        <vend_pieces rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG"/>
+        <vend_pieces rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
+        <vend_pieces rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36"/>
+        <vend_pieces rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6"/>
+        <vend_pieces rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
+        <nomVendeurPieces>Monji</nomVendeurPieces>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Moyen_état -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Moyen_état">
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36"/>
+        <conditionEtat>Moyen_état</conditionEtat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Omar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Omar">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonPeugeot"/>
+        <vend rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
+        <nomVendeur>Omar</nomVendeur>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Peugeot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Peugeot">
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
+        <gammeMarque>MoyenneGamme</gammeMarque>
+        <nomMarque>Peugeot</nomMarque>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Renault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Renault">
+        <caractérise rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
+        <gammeMarque>MoyenneGamme</gammeMarque>
+        <nomMarque>Renault</nomMarque>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Sami -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Sami">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonMercedes"/>
+        <vend rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG"/>
+        <nomVendeur>Sami</nomVendeur>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Samir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Samir">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonRenault"/>
+        <vend rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
+        <nomVendeur>Samir</nomVendeur>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Selim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Selim">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigGarage"/>
+        <fait_diagnostique rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG"/>
+        <fait_diagnostique rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
+        <fait_diagnostique rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36"/>
+        <fait_diagnostique rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6"/>
+        <fait_diagnostique rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
+        <nomDiagnostiqeur>Selim</nomDiagnostiqeur>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Tijeni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Tijeni">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BigGarage"/>
+        <verifie_climatisation rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#ClassG"/>
+        <verifie_climatisation rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Clio"/>
+        <verifie_climatisation rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#E36"/>
+        <verifie_climatisation rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6"/>
+        <verifie_climatisation rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206"/>
+        <nomSpécialisteClimatisation>Tijeni</nomSpécialisteClimatisation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#BMW"/>
+        <nomVoiture>X6</nomVoiture>
+        <prixVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220000</prixVoiture>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Yassine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Yassine">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#MaisonBMW"/>
+        <vend rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#X6"/>
+        <nomVendeur>Yassine</nomVendeur>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206">
+        <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Peugeot"/>
+        <nomVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</nomVoiture>
+        <prixVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17000</prixVoiture>
     </owl:NamedIndividual>
 </rdf:RDF>
 

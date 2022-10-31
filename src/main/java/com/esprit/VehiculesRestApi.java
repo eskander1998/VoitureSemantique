@@ -39,8 +39,7 @@ import java.util.List;
 @RestController
 public class VehiculesRestApi {
 	
-
-    
+   
     List<JSONObject> listVoitures=new ArrayList();
     OntModel model = null;
     public OntModel readModel() {
@@ -74,7 +73,7 @@ public class VehiculesRestApi {
 
             String querygetPays =
    	    	     "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
-   	    	     "PREFIX vec: <http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#>  " +
+   	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
    	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
 
    	    	     " SELECT ?voiture  ?nomVoiture ?prixVoiture  " +
@@ -124,7 +123,7 @@ public class VehiculesRestApi {
 
             String querygetPays =
             		 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
-               	    	     "PREFIX vec: <http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#>  " +
+               	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
                	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
 
    	    	     " SELECT ?marque  ?nomMarque ?gammeMarque " +
@@ -173,7 +172,7 @@ public class VehiculesRestApi {
             model.read(reader,null);
             String querygetPays =
             		 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
-               	    	     "PREFIX vec: <http://www.semanticweb.org/skander/ontologies/2022/9/untitled-ontology-12#>  " +
+               	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
                	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
 
    	    	     " SELECT ?HauteDeGamme ?nomMarque " +
@@ -206,6 +205,230 @@ public class VehiculesRestApi {
     }
     
     
+
+    @RequestMapping(value = "/getGarage",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<JSONObject> queryGarage() {
+    	
+		   
+        List<JSONObject> list=new ArrayList();
+        try {
+            this.model = this.readModel();
+
+            String querygetPays =
+            		 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
+               	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
+               	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+
+   	    	     " SELECT ?garage  ?nomGarage  " +
+   	    	     " WHERE { ?garage vec:nomGarage ?nomGarage .} " ;
+           
+            //Query query = QueryFactory.create(req1);
+            QueryExecution qe = QueryExecutionFactory.create(querygetPays, this.model);
+            ResultSet resultSet = qe.execSelect();
+           int x=0;
+            while (resultSet.hasNext()) {
+                x++;
+                JSONObject obj = new JSONObject();
+                QuerySolution solution = resultSet.nextSolution();
+                //System.out.println(solution.get("x").toString());
+                obj.put("id",x);
+
+                obj.put("label",solution.get("garage").toString().substring(solution.get("garage").toString().indexOf('#')+1));
+
+                obj.put("nomGarage",solution.get("nomGarage").toString().substring(solution.get("nomGarage").toString().indexOf('#')+1));
+
+                list.add(obj);
+            }
+            listVoitures = list ;
+            System.out.println(x);
+            return listVoitures;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    
+    @RequestMapping(value = "/getVendeur",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<JSONObject> getVendeur() {
+    	
+		   
+        List<JSONObject> list=new ArrayList();
+        try {
+            this.model = this.readModel();
+
+            String querygetPays =
+            		 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
+               	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
+               	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+
+   	    	     " SELECT ?vendeur  ?nomVendeur  " +
+   	    	     " WHERE { ?vendeur vec:nomVendeur ?nomVendeur .} " ;
+           
+            //Query query = QueryFactory.create(req1);
+            QueryExecution qe = QueryExecutionFactory.create(querygetPays, this.model);
+            ResultSet resultSet = qe.execSelect();
+           int x=0;
+            while (resultSet.hasNext()) {
+                x++;
+                JSONObject obj = new JSONObject();
+                QuerySolution solution = resultSet.nextSolution();
+                //System.out.println(solution.get("x").toString());
+                obj.put("id",x);
+
+                obj.put("label",solution.get("vendeur").toString().substring(solution.get("vendeur").toString().indexOf('#')+1));
+
+                obj.put("nomVendeur",solution.get("nomVendeur").toString().substring(solution.get("nomVendeur").toString().indexOf('#')+1));
+
+                list.add(obj);
+            }
+            listVoitures = list ;
+            System.out.println(x);
+            return listVoitures;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+
+    @RequestMapping(value = "/getMecanicien",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<JSONObject> getMecanicien() {
+    	
+		   
+        List<JSONObject> list=new ArrayList();
+        try {
+            this.model = this.readModel();
+
+            String querygetPays =
+            		 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
+               	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
+               	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+
+   	    	     " SELECT ?mecanicien  ?nomMecanicien  " +
+   	    	     " WHERE { ?mecanicien vec:nomMecanicien ?nomMecanicien .} " ;
+           
+            //Query query = QueryFactory.create(req1);
+            QueryExecution qe = QueryExecutionFactory.create(querygetPays, this.model);
+            ResultSet resultSet = qe.execSelect();
+           int x=0;
+            while (resultSet.hasNext()) {
+                x++;
+                JSONObject obj = new JSONObject();
+                QuerySolution solution = resultSet.nextSolution();
+                //System.out.println(solution.get("x").toString());
+                obj.put("id",x);
+
+                obj.put("label",solution.get("mecanicien").toString().substring(solution.get("mecanicien").toString().indexOf('#')+1));
+
+                obj.put("nomMecanicien",solution.get("nomMecanicien").toString().substring(solution.get("nomMecanicien").toString().indexOf('#')+1));
+
+                list.add(obj);
+            }
+            listVoitures = list ;
+            System.out.println(x);
+            return listVoitures;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    @RequestMapping(value = "/getDiagnostiqeur",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<JSONObject> getDiagnostiqeur() {
+    	
+		   
+        List<JSONObject> list=new ArrayList();
+        try {
+            this.model = this.readModel();
+
+            String querygetPays =
+            		 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
+               	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
+               	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+
+   	    	     " SELECT ?diagnostiqeur  ?nomDiagnostiqeur  " +
+   	    	     " WHERE { ?diagnostiqeur vec:nomDiagnostiqeur ?nomDiagnostiqeur .} " ;
+           
+            //Query query = QueryFactory.create(req1);
+            QueryExecution qe = QueryExecutionFactory.create(querygetPays, this.model);
+            ResultSet resultSet = qe.execSelect();
+           int x=0;
+            while (resultSet.hasNext()) {
+                x++;
+                JSONObject obj = new JSONObject();
+                QuerySolution solution = resultSet.nextSolution();
+                //System.out.println(solution.get("x").toString());
+                obj.put("id",x);
+
+                obj.put("label",solution.get("diagnostiqeur").toString().substring(solution.get("diagnostiqeur").toString().indexOf('#')+1));
+
+                obj.put("nomDiagnostiqeur",solution.get("nomDiagnostiqeur").toString().substring(solution.get("nomDiagnostiqeur").toString().indexOf('#')+1));
+
+                list.add(obj);
+            }
+            listVoitures = list ;
+            System.out.println(x);
+            return listVoitures;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    
+
+    @RequestMapping(value = "/getMaisonVoiture",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<JSONObject> getMaisonVoiture() {
+    	
+		   
+        List<JSONObject> list=new ArrayList();
+        try {
+            this.model = this.readModel();
+
+            String querygetPays =
+            		 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +        
+               	    	     "PREFIX vec: <http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#>  " +
+               	    	     "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+
+   	    	     " SELECT ?MaisonVoiture  ?nomMaisonVoiture  " +
+   	    	     " WHERE { ?MaisonVoiture vec:nomMaisonVoiture ?nomMaisonVoiture .} " ;
+           
+            //Query query = QueryFactory.create(req1);
+            QueryExecution qe = QueryExecutionFactory.create(querygetPays, this.model);
+            ResultSet resultSet = qe.execSelect();
+           int x=0;
+            while (resultSet.hasNext()) {
+                x++;
+                JSONObject obj = new JSONObject();
+                QuerySolution solution = resultSet.nextSolution();
+                //System.out.println(solution.get("x").toString());
+                obj.put("id",x);
+
+                obj.put("label",solution.get("MaisonVoiture").toString().substring(solution.get("MaisonVoiture").toString().indexOf('#')+1));
+
+                obj.put("nomMaisonVoiture",solution.get("nomMaisonVoiture").toString().substring(solution.get("nomMaisonVoiture").toString().indexOf('#')+1));
+
+                list.add(obj);
+            }
+            listVoitures = list ;
+            System.out.println(x);
+            return listVoitures;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
     
 }
 
