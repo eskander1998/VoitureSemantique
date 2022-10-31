@@ -954,8 +954,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#206">
         <appartient_à rdf:resource="http://www.semanticweb.org/karou/ontologies/2022/8/untitled-ontology-5#Peugeot"/>
-        <nomVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</nomVoiture>
-        <prixVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17000</prixVoiture>
+        <nomVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">206</nomVoiture>
+        <prixVoiture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17000</prixVoiture>
     </owl:NamedIndividual>
 </rdf:RDF>
 
